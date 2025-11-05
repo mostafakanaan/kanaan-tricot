@@ -1,12 +1,12 @@
 
 // Configure your article images here (JPGs placed under assets/images/)
 const ARTICLES = [
-  { src: '../images/article-01.jpg', title: 'Article 01' },
-  { src: 'assets/images/article-02.jpg', title: 'Article 02' },
-  { src: 'assets/images/article-03.jpg', title: 'Article 03' },
-  { src: 'assets/images/article-04.jpg', title: 'Article 04' },
-  { src: 'assets/images/article-05.jpg', title: 'Article 05' },
-  { src: 'assets/images/article-06.jpg', title: 'Article 06' },
+  { src: 'assets/images/article-01.JPG', title: 'Article 01' },
+  { src: 'assets/images/article-02.JPG', title: 'Article 02' },
+  { src: 'assets/images/article-03.JPG', title: 'Article 03' },
+  { src: 'assets/images/article-04.JPG', title: 'Article 04' },
+  { src: 'assets/images/article-05.JPG', title: 'Article 05' },
+  { src: 'assets/images/article-06.JPG', title: 'Article 06' },
 ];
 
 function renderGallery() {
