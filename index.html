@@ -3,47 +3,40 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kanaan Tricot — DNS Test</title>
-  <meta name="description" content="Lightweight test site for custom DNS on GitHub Pages.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text x='10' y='60' font-size='60'>K</text></svg>">
-  <link rel="stylesheet" href="assets/style.css">
+  <title>Kanaan Tricot — Articles</title>
+  <meta name="description" content="A simple gallery of article JPGs with a fancy video background.">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+  <header class="hero">
+    <!-- Drop your background video at assets/media/bg.mp4 -->
+    <video id="bgvid" autoplay muted loop playsinline poster="assets/images/article-01.jpg">
+      <source src="assets/media/bg.mp4" type="video/mp4">
+    </video>
+    <div class="content">
+      <h1>Kanaan Tricot</h1>
+      <p class="tagline">Visual articles — simple, fast, elegant.</p>
+    </div>
+  </header>
+
   <main class="container">
-    <h1>Kanaan Tricot</h1>
-    <p class="tagline">Tiny GitHub Pages site to verify your DNS setup.</p>
-
-    <section class="card">
-      <h2>Live Check</h2>
-      <ul class="facts">
-        <li><strong>Hostname:</strong> <span id="host">—</span></li>
-        <li><strong>Protocol:</strong> <span id="proto">—</span></li>
-        <li><strong>Path:</strong> <span id="path">—</span></li>
-        <li><strong>Loaded at:</strong> <span id="time">—</span></li>
-      </ul>
-      <p>If you can see your custom domain in the hostname above and the page loads over HTTPS, your DNS and GitHub Pages are working ✅.</p>
+    <section>
+      <h2 style="margin:0 0 .5rem 0;">Latest Articles</h2>
+      <p class="tagline" style="margin-top:0">Replace the JPGs in <code>assets/images/</code> and update <code>assets/js/app.js</code> if you change filenames.</p>
+      <div id="gallery" class="gallery"></div>
     </section>
-
-    <section class="card">
-      <h2>Next Steps</h2>
-      <ol>
-        <li>Add your custom domain in <em>Settings → Pages</em> on GitHub.</li>
-        <li>Create A/AAAA (or ALIAS/ANAME) records at your DNS provider as documented by GitHub.</li>
-      </ol>
-    </section>
-
-    <footer>
-      <small>© <span id="year"></span> Kanaan Tricot</small>
-    </footer>
   </main>
 
-  <script>
-    const loc = window.location;
-    document.getElementById('host').textContent = loc.hostname || 'localhost';
-    document.getElementById('proto').textContent = loc.protocol;
-    document.getElementById('path').textContent = loc.pathname;
-    document.getElementById('time').textContent = new Date().toString();
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <div id="lightbox">
+    <button class="close" onclick="closeLightbox()" aria-label="Close">×</button>
+    <img alt="">
+  </div>
+
+  <footer class="footer">
+    <small>© <span id="year"></span> Kanaan Tricot</small>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="assets/js/app.js"></script>
 </body>
 </html>
