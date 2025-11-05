@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kanaan Tricot — DNS Test</title>
+  <meta name="description" content="Lightweight test site for custom DNS on GitHub Pages.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text x='10' y='60' font-size='60'>K</text></svg>">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Kanaan Tricot</h1>
+    <p class="tagline">Tiny GitHub Pages site to verify your DNS setup.</p>
+
+    <section class="card">
+      <h2>Live Check</h2>
+      <ul class="facts">
+        <li><strong>Hostname:</strong> <span id="host">—</span></li>
+        <li><strong>Protocol:</strong> <span id="proto">—</span></li>
+        <li><strong>Path:</strong> <span id="path">—</span></li>
+        <li><strong>Loaded at:</strong> <span id="time">—</span></li>
+      </ul>
+      <p>If you can see your custom domain in the hostname above and the page loads over HTTPS, your DNS and GitHub Pages are working ✅.</p>
+    </section>
+
+    <section class="card">
+      <h2>Next Steps</h2>
+      <ol>
+        <li>Add your custom domain in <em>Settings → Pages</em> on GitHub.</li>
+        <li>Create A/AAAA (or ALIAS/ANAME) records at your DNS provider as documented by GitHub.</li>
+      </ol>
+    </section>
+
+    <footer>
+      <small>© <span id="year"></span> Kanaan Tricot</small>
+    </footer>
+  </main>
+
+  <script>
+    const loc = window.location;
+    document.getElementById('host').textContent = loc.hostname || 'localhost';
+    document.getElementById('proto').textContent = loc.protocol;
+    document.getElementById('path').textContent = loc.pathname;
+    document.getElementById('time').textContent = new Date().toString();
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
