@@ -1,7 +1,7 @@
 
 // Configure your article images here (JPGs placed under assets/images/)
 const ARTICLES = [
-  { src: 'assets/images/article-01.jpg', title: 'Article 01' },
+  { src: '../images/article-01.jpg', title: 'Article 01' },
   { src: 'assets/images/article-02.jpg', title: 'Article 02' },
   { src: 'assets/images/article-03.jpg', title: 'Article 03' },
   { src: 'assets/images/article-04.jpg', title: 'Article 04' },
